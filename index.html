@@ -6,7 +6,8 @@
     <title>MISBAHSTORE - أفضل الأسعار على الملابس</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-</head>
+</head> 
+   <link rel="manifest" href="manifest.json"> 
 <body>
     <!-- Header -->
     <header class="header">
@@ -94,6 +95,13 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <script src="script.js"></script> 
+    <script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js');
+    });
+  }
+</script>
+</body> 
 </html>
