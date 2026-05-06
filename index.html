@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MISBAHSTORE - أفضل الأسعار على الملابس</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-store"></i> MISBAHSTORE</h1>
+            </div>
+            <div class="search-box">
+                <input type="text" placeholder="ابحث عن الملابس...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="cart-icon">
+                <i class="fas fa-shopping-cart" id="cartCount">0</i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>تخفيضات تصل إلى 70% 🔥</h2>
+            <p>أفضل جودة بأقل سعر - شحن مجاني لكل الطلبات!</p>
+            <button class="cta-btn">تسوق الآن</button>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">المنتجات الشائعة</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="modal" id="cartModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>سلة التسوق</h2>
+            <div class="cart-items" id="cartItems"></div>
+            <div class="cart-total">
+                <h3>المجموع: <span id="totalPrice">0</span> درهم</h3>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">الدفع الآن</button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div class="modal" id="paymentModal">
+        <div class="modal-content">
+            <span class="close" id="closePayment">&times;</span>
+            <h2>طرق الدفع</h2>
+            <div class="payment-methods">
+                <div class="payment-method" data-method="whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>الدفع عند الاستلام</h4>
+                    <p>0709638822</p>
+                </div>
+                <div class="payment-method" data-method="paypal">
+                    <i class="fab fa-paypal"></i>
+                    <h4>PayPal</h4>
+                    <p>misbahstore@gmail.com</p>
+                </div>
+                <div class="payment-method" data-method="visa">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Visa/Mastercard</h4>
+                    <p>الدفع الآمن</p>
+                </div>
+                <div class="payment-method" data-method="googleplay">
+                    <i class="fab fa-google-play"></i>
+                    <h4>Google Play</h4>
+                    <p>رصيد الهاتف</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div class="modal" id="quickViewModal">
+        <div class="modal-content product-modal">
+            <span class="close" id="closeQuickView">&times;</span>
+            <div class="product-quickview" id="quickViewContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
